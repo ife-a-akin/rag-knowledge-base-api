@@ -118,14 +118,14 @@ Backend/
 
 ### Clone Repository
 ```plaintext
-git clone https://github.com/ife-a-akin/rag-knowledge-base-api.git<br>
-cd rag-knowledge-base-api<br>
+git clone https://github.com/ife-a-akin/rag-knowledge-base-api.git
+cd rag-knowledge-base-api
 ```
 
 ---
 ### Install Dependencies
 ```plaintext
-pip install -r requirements.txt<br>
+pip install -r requirements.txt
 ```
 
 ---
@@ -161,6 +161,7 @@ http://localhost:8000/docs
 ---
 ### Upload Document
 POST /upload | Header: THE-API-KEY: pass123<br>
+
 Uploads a PDF, generates embeddings, builds a FAISS index, and stores metadata.
 
 ---
@@ -173,7 +174,7 @@ Example request:
   "query": "What is the leave policy?",
   "document_name": "employee_handbook.pdf",
   "debug": false
-}<br>
+}
 ```
 
 Example response: 
