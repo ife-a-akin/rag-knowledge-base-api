@@ -70,6 +70,8 @@ The project focuses on backend architecture for AI-powered knowledge systems rat
 
 ## Project Structure
 
+
+```plaintext
 Backend/
 │
 ├── app.py
@@ -85,6 +87,7 @@ Backend/
 │   └── <document_name>/
 │       ├── *_index.bin
 │       └── *_chunks.pkl
+```
 
 
 ---
@@ -187,7 +190,6 @@ Benchmarked locally:
 
 ---
 
-```markdown
 ## API Documentation
 
 ![Redocs UI](assets/redocs.png)
@@ -204,4 +206,4 @@ Benchmarked locally:
 
 ![Demo](assets/demo.gif)
 
-```
+
