@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+faiss-cpu
+sentence-transformers
+psycopg2-binary
+pydantic
+fastapi.security.api_key
+requests
+pymupdf
