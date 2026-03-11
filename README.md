@@ -115,36 +115,47 @@ Backend/
 ---
 
 ## Setup
----
+
 ### Clone Repository
+```plaintext
 git clone https://github.com/ife-a-akin/rag-knowledge-base-api.git<br>
-cd YOUR_REPO<br>
+cd rag-knowledge-base-api<br>
+```
 
 ---
 ### Install Dependencies
+```plaintext
 pip install -r requirements.txt<br>
+```
 
 ---
 ### Start PostgreSQL with Docker
-docker run -d \<br>
--e POSTGRES_DB=ragdb \<br>
--e POSTGRES_USER=raguser \<br>
--e POSTGRES_PASSWORD=ragpass \<br>
--p 5432:5432 \<br>
-postgres:15<br>
+```plaintext
+docker run -d \
+-e POSTGRES_DB=ragdb \
+-e POSTGRES_USER=raguser \
+-e POSTGRES_PASSWORD=ragpass \
+-p 5432:5432 \
+postgres:15
+```
 
 ---
 ### Run FastAPI
+```plaintext
 uvicorn app:app --reload
+```
 
 ---
 #### API base url
+```plaintext
 http://localhost:8000
+```
 
 ---
 #### Swagger documentation
+```plaintext
 http://localhost:8000/docs
-
+```
 
 ## API Endpoints
 ---
@@ -156,16 +167,22 @@ Uploads a PDF, generates embeddings, builds a FAISS index, and stores metadata.
 ### Query Document
 POST /query<br>
 
-Example request : {
+Example request: 
+```plaintext
+{
   "query": "What is the leave policy?",
   "document_name": "employee_handbook.pdf",
   "debug": false
 }<br>
+```
 
-Example response : {
+Example response: 
+```plaintext
+{
   "answer": "Employees are entitled to...",
   "confidence": 0.47
 }
+```
 
 ---
 ### Health Check
@@ -174,7 +191,7 @@ GET /health
 ---
 
 ## Performance
-Benchmarked locally:
+Benchmarked locally (before integrating database and multi-document functionality):
 - ~29s cold startup (model + index load)
 - ~5–6s average query latency after initialization
 
